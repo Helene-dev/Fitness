@@ -72,7 +72,7 @@ body {
     }
 
 .header-right {
-      background: var(--color-purple);
+      background: var(--color-blue-light);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -831,6 +831,57 @@ section.visible {
       
       .hero-text h1 {
         font-size: 48px;
+      }
+
+      .burger {
+        display: flex;
+      }
+      
+.nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--color-purple);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 100px 0 20px;
+        gap: 0;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 1001;
+      }
+      
+      .nav-menu.show {
+        right: 0;
+      }
+      
+      .nav-link {
+        
+        
+        border-radius: 10;
+      }
+      
+      .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        display: block;
+      }
+      
+      .nav-overlay.show {
+        opacity: 1;
+        visibility: visible;
       }
       
       .services-list,
